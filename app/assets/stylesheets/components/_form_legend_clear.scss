@@ -8,3 +8,17 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.login-form{
+  width: 100%;
+}
+
+form{
+  width: 50%;
+}
+
+form button,
+form input{
+  height: 50px;
+  width: 50%;
+}
