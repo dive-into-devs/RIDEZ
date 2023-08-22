@@ -17,3 +17,13 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
 }
+.homebutton{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 10px;
+}
+input{
+  height: 25px;
+  width: 120px;
+}
