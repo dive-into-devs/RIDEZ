@@ -1,0 +1,21 @@
+<div class="d-flex flex-column justify-content-center align-items-center mt-5 align-self-center">
+<h3>Log in</h3>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs w-100 d-flex flex-column align-items-center justify-content-center">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions w-100">
+      <%= f.button :submit, "Log in", class: "btn btn-primary rounded-3 w-100" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
