@@ -1,10 +1,10 @@
 class CarsController < ApplicationController
   def index
-    @cars = car.all
+    @cars = Car.all
   end
 
   def show
-    @car = car.find(params[:id])
+    @car = Car.find(params[:id])
   end
 
   def new

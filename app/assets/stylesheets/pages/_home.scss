@@ -22,11 +22,60 @@ p {
  display: flex;
  flex-direction: row;
  justify-content: center;
+ align-items: center;
  gap: 10px;
  position: absolute;
- bottom: -20px;
+ bottom: -14px;
 }
 input{
-  height: 25px;
+  height: 35px;
+  width: 180px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  padding: 0px 20px;
+}
+
+button{
   width: 120px;
+  height: 35px;
+  border: none;
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  padding: 0px 20px;
+}
+
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+select {
+  margin: 0 auto;
+  color: #700d9b;
+  width: 180px;
+  // padding: 25px;
+  height: 35px;
+  cursor: pointer;
+  background: url(http://sharpik.com/wip/cuteselect/arrow.png) 295px 12px no-repeat white;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  padding: 0px 20px;
+}
+
+select option {
+  background-color: white;
+  color: gray;
+  width: 180px;
+  // padding: 10px 15px;
+  height: 35px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: none;
 }
