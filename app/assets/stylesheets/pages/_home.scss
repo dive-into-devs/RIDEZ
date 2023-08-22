@@ -5,14 +5,25 @@ background-image: url("https://i.ibb.co/gzcQyTJ/cyberpunk-mclaren-supercars-neon
 height: 300px;
 background-size: cover;
 background-position: center;
-color: white;
 }
 
 h2 {
+  color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 60px;
 }
 p {
+  color: silver;
   font-family: 'Roboto', sans-serif;
-  font-size: 60px;
+  font-size: 20px;
+}
+.homebutton{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 10px;
+}
+input{
+  height: 25px;
+  width: 120px;
 }
