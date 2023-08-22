@@ -26,7 +26,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_165504) do
   end
 
   create_table "offers", force: :cascade do |t|
-    t.bigint "owner_id", null: false
     t.bigint "user_id", null: false
     t.bigint "car_id", null: false
     t.string "price"
@@ -35,16 +34,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_165504) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["car_id"], name: "index_offers_on_car_id"
-    t.index ["owner_id"], name: "index_offers_on_owner_id"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
   create_table "owners", force: :cascade do |t|
-    t.string "full_name"
-    t.string "billing_address"
-    t.string "phone_number"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_owners_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,6 +63,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_21_165504) do
 
   add_foreign_key "cars", "owners"
   add_foreign_key "offers", "cars"
-  add_foreign_key "offers", "owners"
   add_foreign_key "offers", "users"
+  add_foreign_key "owners", "users"
 end
