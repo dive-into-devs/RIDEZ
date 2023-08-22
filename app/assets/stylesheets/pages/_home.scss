@@ -1,8 +1,10 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 .banner {
 background-image: url("https://i.ibb.co/gzcQyTJ/cyberpunk-mclaren-supercars-neon-art-1003.jpg");
 height: 300px;
 background-size: cover;
 background-position: center;
 color: white;
+font-family: 'Roboto', sans-serif;
 }
