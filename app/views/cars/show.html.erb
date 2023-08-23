@@ -1,32 +1,63 @@
-<!-- app/views/cars/show.html.erb -->
+<div class="container mt-5 mb-5 d-flex flex-column justify-content-center align-items-center ">
+  <!-- app/views/cars/show.html.erb -->
 
-<h1>Car Details</h1>
+  <div class="title_buttons">
+    <h3 class="card-show-title"><%= @car.model %></h3>
+    <div class="buttons">
+      <%= link_to 'Back to Cars', cars_path, class: "btn btn-primary" %>
+        <%= link_to 'Back to Home Page', root_path, class: "btn btn-primary" %>
+    </div>
 
-<div>
-  <strong>Model:</strong>
-  <%= @car.model %>
+  </div>
+  <div class="images-section d-flex flex-row justify-content-center align-items-center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Dodge_Challenger_SRT8_%282015%29_Hirschaid-20220709-RM-120221.jpg" alt="">
+    <div class="images-groupe">
+        <img src="https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/competitive-compare/challenger/desktop/MY23_CompComp_Challenger_Promo_Tile_Set_The_Tone-_01.jpg" alt="">
+        <img src="https://bringatrailer.com/wp-content/uploads/2023/05/2023_dodge_challenger_cc176958-2e8f-4ea7-807a-82dd7ba33f62-43930.jpeg?fit=940%2C589" alt="">
+        <img src="https://cdcssl.ibsrv.net/autodata/images/?img=USC90DOC191C01300.jpg&width=697&height=523" alt="">
+        <img src="https://pictures.dealer.com/p/powercdjcllc/1445/19155630ba83e76189032c7cf43a3213x.jpg" alt="">
+
+    </div>
+  </div>
+
+
+    <div class="details_card">
+
+        <div>
+          <strong>Plate:</strong>
+          <%= @car.plate %>
+        </div>
+
+        <div>
+          <strong>VIN:</strong>
+          <%= @car.vin %>
+        </div>
+
+        <div>
+          <strong>Owner:</strong>
+          <%= @car.owner.user_id %>
+        </div>
+
+        <div>
+          <strong>Description:</strong>
+          <%= @car.description %>
+        </div>
+
+  </div>
+
+  <div class="d-flex flex-row justify-content-between align-items-start w-100 px-4 mt-5">
+    <div id='map' data-controller="map" class="map" style='width: 500px; height: 600px;border-radius:10px'></div>
+    <div class="form-card">
+    <h5>Personal Details</h5>
+    <%= form_with url: "/search", method: :get do |form| %>
+    <%= form.text_field :query, placeholder: "placeholder text" %>
+    <%= form.text_field :query, placeholder: "placeholder text" %>
+    <%= form.text_field :query, placeholder: "placeholder text" %>
+    <%= form.text_field :query, placeholder: "placeholder text" %>
+    <%= form.text_field :query, placeholder: "placeholder text" %>
+    <%= form.text_field :query, placeholder: "placeholder text" %>
+    <%= form.submit "Search", class: "btn btn-success text-light" %>
+    <% end %>
+    </div>
+  </div>
 </div>
-
-<div>
-  <strong>plate:</strong>
-  <%= @car.plate %>
-</div>
-
-<div>
-  <strong>VIN:</strong>
-  <%= @car.vin %>
-</div>
-
-<div>
-  <strong>Owner:</strong>
-  <%= @car.owner.user_id %>
-</div>
-
-<div>
-  <strong>Description:</strong>
-  <%= @car.description %>
-</div>
-
-<%= link_to 'Back to Cars', cars_path %>
-<br>
-<%= link_to 'Back to Home Page', root_path %>
