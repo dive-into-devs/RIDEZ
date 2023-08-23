@@ -1,6 +1,6 @@
 <div class="banner d-flex flex-column justify-content-center align-items-center">
   <h2>RIDEZ</h2>
-    <p> Welcome to our homepage!</p>
+    <p> find your favourite car</p>
     <div class="filter-section">
 <form>
 <Select>
@@ -22,12 +22,14 @@
 </div>
 </div>
 <div class="container mt-5 w-100">
-  <h4>Cars List</h4>
+  <div class="d-flex flex-row justify-content-between align-items-center">
+    <h4>Cars List</h4>
+    <%= link_to "View all", "index" ,class: "btn btn-primary rounded" %>
+  </div>
     <hr size="2">
-
   <div class="container d-flex flex-row flex-wrap justify-content-center align-items-center w-100">
     <ul class="d-flex flex-row justify-content-start align-items-start w-100 gap-2 p-0 flex-wrap">
-      <% @cars.each do | car |  %>
+      <% @cars[0..7].each do | car |  %>
         <li class="card card-sizing">
           <img src="https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-x-101-1671475309.jpeg?crop=0.375xw:0.300xh;0.391xw,0.323xh&resize=640:*" class="card-img-top" alt="car">
           <div class="card-body">

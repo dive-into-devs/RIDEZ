@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(13, 0, 0);
+  background: #191919;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,4 +16,9 @@
 .nav-link{
   color: white;
   font-family: roboto;
+}
+.nav-link:hover,
+.nav-link:focus{
+  color: white;
+  transform: scale(1.2);
 }
