@@ -29,7 +29,14 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to  root_path, class: "nav-link" do %>
+            <i class="fa-solid fa-house"></i> home
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to  new_user_session_path, class: "nav-link" do %>
+            <i class="fa-solid fa-right-to-bracket"></i> login
+            <% end %>
           </li>
         <% end %>
       </ul>

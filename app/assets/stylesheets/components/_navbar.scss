@@ -17,3 +17,8 @@
   color: white;
   font-family: roboto;
 }
+.nav-link:hover,
+.nav-link:focus{
+  color: white;
+  transform: scale(1.2);
+}
