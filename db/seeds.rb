@@ -15,6 +15,6 @@ Offer.destroy_all
 User.create!(email: "ej@ds.com", password: "1232323", full_name: "jack", billing_address: "illinos", phone_number: "00020398239238", payment_information: "Credit Card", driver_license: "938283728")
 Owner.create!(user_id: User.first.id)
 16.times do
-  Car.create!(plate: Faker::Vehicle.license_plate, model: Faker::Vehicle.make_and_model, vin: Faker::Vehicle.vin, owner_id: Owner.first.id, description:Faker::Vehicle.standard_specs)
+  Car.create!(plate: Faker::Vehicle.license_plate, model: Faker::Vehicle.make_and_model, vin: Faker::Vehicle.vin, owner_id: Owner.first.id, description:Faker::Vehicle.car_type)
 end
 Offer.create!(user_id: User.first.id, car_id: Car.first.id, price: "50$", time_period: "24-11-2023", location: "casablanca")
