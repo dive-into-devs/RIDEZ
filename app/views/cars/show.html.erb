@@ -1,0 +1,32 @@
+<!-- app/views/cars/show.html.erb -->
+
+<h1>Car Details</h1>
+
+<div>
+  <strong>Model:</strong>
+  <%= @car.model %>
+</div>
+
+<div>
+  <strong>plate:</strong>
+  <%= @car.plate %>
+</div>
+
+<div>
+  <strong>VIN:</strong>
+  <%= @car.vin %>
+</div>
+
+<div>
+  <strong>Owner:</strong>
+  <%= @car.owner %>
+</div>
+
+<div>
+  <strong>Description:</strong>
+  <%= @car.description %>
+</div>
+
+<%= link_to 'Back to Cars', cars_path %>
+<br>
+<%= link_to 'Back to Home Page', root_path %>

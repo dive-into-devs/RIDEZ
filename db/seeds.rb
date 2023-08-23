@@ -5,13 +5,6 @@
 require "faker"
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
-User.destroy_all
-Owner.destroy_all
-Car.destroy_all
-Offer.destroy_all
-
-
 User.create!(email: "ej@ds.com", password: "1232323", full_name: "jack", billing_address: "illinos", phone_number: "00020398239238", payment_information: "Credit Card", driver_license: "938283728")
 Owner.create!(user_id: User.first.id)
 16.times do
