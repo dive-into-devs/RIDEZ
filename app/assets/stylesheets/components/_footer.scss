@@ -1,0 +1,38 @@
+footer{
+  background-color: #191919;
+  width: 100%;
+  height: 90px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.icons-box{
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  gap: 7px;
+}
+.second-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+.follow{
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-letter{
+  font-size: 15px;
+}
+.fot{
+  font-size: 13px;
+}
+.address{
+  font-size: 15px;
+}
