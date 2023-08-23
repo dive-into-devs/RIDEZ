@@ -7,6 +7,10 @@ class OffersController < ApplicationController
     @offers = Offer.new
   end
 
+  def show
+    @car = Car.find(params[:id])
+  end
+
   def create
     @offer = Offer.new(offer_params)
     @offer.car = @car
