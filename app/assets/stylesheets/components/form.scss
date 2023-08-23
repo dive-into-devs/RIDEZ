@@ -1,0 +1,39 @@
+.form-card{
+    // height: 788px;
+    width: 40%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px -3px black;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.form-card h5{
+  color: #828282;
+  align-self: center;
+  justify-self: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap:25px;
+  padding:20px;
+}
+
+form input{
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 0px 20px;
+}
