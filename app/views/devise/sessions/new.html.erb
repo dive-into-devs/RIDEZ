@@ -1,28 +1,28 @@
-<div class="d-flex flex-row justify-content-center align-items-center pt-5 align-self-center sign-container">
+<div class="d-flex flex-row justify-content-start align-items-center align-self-center sign-container">
 <%# <h3>Log in</h3> %>
-    <div class="w-50 d-flex justify-content-center align-items-center flex-column">
+    <div class="w-50 d-flex justify-content-start align-items-center flex-column">
     <h2>Welcome Back</h2>
-    <div class="d-flex flex-row justify-content-center align-items-center gap-5">
+    <div class="d-flex flex-row justify-content-center align-items-center gap-2">
       <p class="text-light">You are new ?</p>
       <%= render "devise/shared/signupbutton" %>
     </div>
     </div>
 
-      <div class="w-50 d-flex justify-content-center align-items-center flex-column">
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <%= f.input :email,
-                      required: false,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" } %>
-          <%= f.input :password,
-                      required: false,
-                      input_html: { autocomplete: "current-password" } %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        <div class="form-actions w-100">
-          <%= f.button :submit, "Log in", class: "btn btn-primary rounded-3 w-100 " %>
-        </div>
-        <% end %>
-    <%= render "devise/shared/forgetpassbutton" %>
+      <div class="w-50 d-flex justify-content-center align-items-center flex-column"> <div class="form-inputs">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+            <%= f.input :password,
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          <div class="form-actions w-100">
+            <%= f.button :submit, "Log in", class: "btn btn-primary rounded-3 w-100 " %>
+          </div>
+          <% end %>
+          <%= render "devise/shared/forgetpassbutton" %>
       </div>
 
 
