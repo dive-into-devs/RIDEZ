@@ -1,0 +1,136 @@
+.credit-card {
+  width: 50%;
+  height: 400px;
+  margin: 60px auto 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 1px 2px 3px 0 rgba(0,0,0,.10);
+}
+
+.form-header {
+  height: 60px;
+  padding: 20px 30px 0;
+  border-bottom: 1px solid #e1e8ee;
+}
+
+.form-body {
+  height: 340px;
+  padding: 30px 30px 20px;
+}
+
+.title {
+  font-size: 18px;
+  margin: 0;
+  color: #5e6977;
+}
+
+card-number,
+.cvv-input input,
+.month select,
+.year select {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 14px;
+}
+
+.card-number,
+.month select,
+.year select {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 14px;
+}
+
+.card-number,
+.cvv-details,
+.cvv-input input,
+.month select,
+.year select {
+    opacity: .7;
+    color: #86939e;
+}
+
+.card-number {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+}
+
+.month select,
+.year select {
+    width: 145px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: url('caret.png') no-repeat;
+    background-position: 85% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.month select {
+    float: left;
+}
+
+.year select {
+    float: right;
+}
+
+.cvv-input input {
+  float: left;
+  width: 145px;
+  padding-left: 20px;
+  border: 2px solid #e1e8ee;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.cvv-details {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 16px;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.sentence{
+  font-size: 10px;
+}
+
+.cvv-details p {
+  margin-top: 6px;
+}
+
+.proceed-btn {
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  border-color: transparent;
+  border-radius: 6px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+a{
+  text-decoration: none;
+}
+
+.proceed-btn a {
+  color: #fff;
+}
+.order-detail{
+  background: rgb(116,5,191);
+  background: -moz-linear-gradient(144deg, rgba(116,5,191,1) 0%, rgba(236,10,191,1) 100%);
+  background: -webkit-linear-gradient(144deg, rgba(116,5,191,1) 0%, rgba(236,10,191,1) 100%);
+  background: linear-gradient(144deg, rgba(116,5,191,1) 0%, rgba(236,10,191,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7405bf",endColorstr="#ec0abf",GradientType=1);
+  height: 100%;
+}
