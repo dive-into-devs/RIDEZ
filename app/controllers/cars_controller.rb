@@ -1,6 +1,11 @@
 class CarsController < ApplicationController
   def index
     @cars = Car.all
+    @cars = Car.where("model ilike '%#{params[:brand]}%'") if params[:brand].present?   # params[:location]
+    @cars = @cars.where("location ilike '%#{params[:location]}%'") if params[:location].present?   # params[:location]
+   # params[:location]
+   # params[:brand]
+   # params[:date]
   end
 
   def show

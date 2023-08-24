@@ -2,23 +2,23 @@
   <h2>RIDEZ</h2>
     <p> find your favourite car</p>
     <div class="filter-section">
-<form>
-<Select>
+<form action="/cars" method="get">
+<Select name="brand">
   <option>brand</option>
-  <option value="BMV">BMW</option>
-  <option value="Meredes">Mercedes</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
   <option value="Audi">Audi</option>
 </Select>
-<Select>
+<Select name="location">
 <option>location</option>
 <option value="casablanca">casablanca</option>
 <option value="tangier">tangier</option>
 <option value="rabat">rabat</option>
 <option value="marrakech">marakkech</option>
 </select>
+<input name="date" type="text" data-controller="datepicker" placeholder="select a date"/>
+<input type="submit"></input>
 </form>
-<input type="text" data-controller="datepicker" placeholder="select a date"/>
-<button>Submit</button>
 </div>
 </div>
 <div class="container mt-5 w-100">
