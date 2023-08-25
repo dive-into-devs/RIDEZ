@@ -10,3 +10,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.app-container{
+  min-height: 100vh;
+}
