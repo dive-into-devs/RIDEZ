@@ -29,6 +29,7 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    @car.location = car_params[:location].capitalize
     if Owner.find_by(user: current_user)
       @owner = Owner.find_by(user: current_user)
     else
