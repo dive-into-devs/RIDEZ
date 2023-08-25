@@ -14,3 +14,36 @@ a{
 p{
   margin: 0;
 }
+label{
+  color: white;
+}
+.form-check-input[type="checkbox"]{
+  padding:0
+}
+.reset-btn{
+  color: white;
+  background-color: blue;
+
+}
+
+.form-control{
+  width: 100%;
+}
+.form-inputs{
+  width: 50%;
+}
+
+.form-actions{
+  width: 50%;
+}
+.form-actions input[type="submit"]{
+  width: 100%;
+
+}
+
+.form-text{
+  color: yellow;
+}
+.new_user{
+  width: 100%;
+}
