@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+
   def index
     @cars = Car.all
     @cars = Car.where("model ilike '%#{params[:brand]}%'") if params[:brand].present?   # params[:location]
@@ -18,13 +19,20 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
-    @car.save
-    redirect_to car_path(@car)
+    if Owner.find_by(user: current_user)
+      @owner = Owner.find_by(user: current_user)
+    else
+      @owner = Owner.create(user: current_user)
+    end
+
+    @car.owner = @owner
+    @car.save!
+    redirect_to cars_path
   end
 
   private
 
   def car_params
-    params.require(:car).permit(:plate, :model, :vin, :owner, :description)
+    params.require(:car).permit(:plate, :model, :vin, :owner, :description, :price, :location, photos: [])
   end
 end
