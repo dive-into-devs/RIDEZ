@@ -1,14 +1,17 @@
 <!-- app/views/cars/new.html.erb -->
 
-<div class="container m-4">
-  <%= simple_form_for(@car) do |f| %>
-    <%= f.input :model %>
-    <%= f.input :vin %>
-    <%= f.input :plate %>
-    <%= f.input :price %>
-    <%= f.input :location %>
-    <%= f.input :description %>
-    <%= f.input :photos, as: :file,  input_html: { multiple: true } %>
-    <%= f.submit %>
-  <% end %>
+<div class="container d-flex justify-content-center align-items-center flex-column create-form">
+<h3>Fill out the form</h3>
+  <div class="form-background">
+    <%= simple_form_for(@car) do |f| %>
+      <%= f.input :model %>
+      <%= f.input :vin %>
+      <%= f.input :plate %>
+      <%= f.input :price %>
+      <%= f.input :location %>
+      <%= f.input :description %>
+      <%= f.input :photos, as: :file,  input_html: { multiple: true } %>
+      <%= f.submit class: "btn btn-success text-light sub-btn" %>
+    <% end %>
+  </div>
 </div>
