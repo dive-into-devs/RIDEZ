@@ -1,27 +1,14 @@
 <!-- app/views/cars/new.html.erb -->
 
 <div class="container m-4">
-  <%= form_with model: @car do |f| %>
-    <div>
-      <%= f.label :model %>
-      <%= f.text_field :model %>
-    </div>
-    <br>
-    <div>
-      <%= f.label :vin %>
-      <%= f.text_field :vin %>
-    </div>
-    <br>
-    <div>
-      <%= f.label :plate %>
-      <%= f.text_field :plate %>
-    </div>
-    <br>
-    <div>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-    </div>
-    <br>
-    <%= link_to f.submit, cars_path %>
+  <%= simple_form_for(@car) do |f| %>
+    <%= f.input :model %>
+    <%= f.input :vin %>
+    <%= f.input :plate %>
+    <%= f.input :price %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :photos, as: :file,  input_html: { multiple: true } %>
+    <%= f.submit %>
   <% end %>
 </div>
