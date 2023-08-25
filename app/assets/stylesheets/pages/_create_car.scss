@@ -1,0 +1,29 @@
+.create-form{
+  margin-top: 200px;
+  width: 400px;
+  label{
+    color: black;
+  }
+  .sub-btn{
+    border-radius: 6px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div{
+      width: 100%;
+    }
+    input[type="submit"]{
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  h3{
+    font-family: roboto;
+    margin-bottom: 40px;
+  }
+}
