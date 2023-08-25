@@ -1,0 +1,14 @@
+<h1>Your Listings</h1>
+<ul class="d-flex flex-row justify-content-start align-items-start w-100 gap-2 p-0 flex-wrap">
+<% @cars.each do |car| %>
+ <li class="card card-sizing">
+  <img src="https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-x-101-1671475309.jpeg?crop=0.375xw:0.300xh;0.391xw,0.323xh&resize=640:*" class="card-img-top" alt="car">
+    <div class="card-body">
+      <h5 class="card-title"><%= car.model%></h5>
+      <p class= "card-text"><%= car.description%>
+      </p>
+      <%= link_to "Details", car_path(car), class: "btn btn-primary" %>
+    </div>
+  </li>
+  <% end %>
+</ul>
