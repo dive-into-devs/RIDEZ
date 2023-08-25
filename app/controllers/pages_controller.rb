@@ -12,4 +12,9 @@ class PagesController < ApplicationController
 
   def confirmation
   end
+
+  def listing
+    @owner = Owner.find_by(user: current_user)
+    @cars = @owner.cars
+  end
 end
