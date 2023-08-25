@@ -3,15 +3,34 @@ import mapboxgl from 'mapbox-gl' // Don't forget this!
 // Connects to data-controller="map"
 export default class extends Controller {
   static values = {
-    apiKey: String
+    apiKey: String,
+    markers: Array
   }
   connect() {
-    mapboxgl.accessToken = "pk.eyJ1IjoiYWhtZWQyNDEwMDAiLCJhIjoiY2xsMHNjdHdlMGh0cTNncDNxcHBjNTAxeiJ9.bG8M1yDWHBV5okrxB_z7Cw";
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [ -7.603869, 33.589886 ],
-    zoom: 12
-  });
+    mapboxgl.accessToken = this.apiKeyValue;
+
+    this.map = new mapboxgl.Map({
+      container: this.element,
+      style: "mapbox://styles/mapbox/streets-v10"
+    })
+    this.#addMarkersToMap()
+    this.#fitMapToMarkers()
+  }
+
+  #fitMapToMarkers() {
+    const bounds = new mapboxgl.LngLatBounds()
+    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  }
+
+  #addMarkersToMap() {
+    this.markersValue.forEach((marker) => {
+      const customMarker = document.createElement("div")
+      customMarker.innerHTML = marker.marker_html
+
+      new mapboxgl.Marker(customMarker)
+        .setLngLat([ marker.lng, marker.lat ])
+        .addTo(this.map)
+    })
   }
 }
