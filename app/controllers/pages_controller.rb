@@ -17,4 +17,9 @@ class PagesController < ApplicationController
     @owner = Owner.find_by(user: current_user)
     @cars = @owner.cars
   end
+
+  def offers
+    @user = current_user
+    @offers = @user.offers
+  end
 end

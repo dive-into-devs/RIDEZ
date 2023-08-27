@@ -14,6 +14,7 @@
           <div class="card-body">
           <h5 class="card-title"><%= car.model%></h5>
           <p class= "card-text"><%= car.description%><span>/<%= car.location%></span></p>
+          <p class= "card-text">$<%= car.price%></p>
           <%= link_to "Details", car_path(car), class: "btn btn-primary" %>
           </div>
         </li>
