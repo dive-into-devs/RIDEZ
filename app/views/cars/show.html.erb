@@ -42,6 +42,11 @@
           <%= @car.description %>
         </div>
 
+        <div>
+          <strong>Price:</strong>
+          $<%= @car.price %>
+        </div>
+
   </div>
 
   <div class="d-flex flex-row justify-content-between align-items-start w-100 px-4 mt-5">
@@ -54,7 +59,7 @@
       </div>
     <div class="form-card">
     <h5>Personal Details</h5>
-    <%= form_with url: "/search", method: :get do |form| %>
+    <%= form_with action: new_car_offer_path(@car.id) do |form| %>
     <%= form.text_field :query, placeholder: "First name" %>
     <%= form.text_field :query, placeholder: "Last name" %>
     <input name="date" type="text" data-controller="datepicker" placeholder="Start date"/>
