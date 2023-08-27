@@ -5,13 +5,14 @@
          <div class="form-header">
         <h4 class="title">Credit card detail</h4>
          </div>
-         <div class="form-body">
+         <div class="form-body" data-controller="formv">
         <!-- Card Number -->
-           <input type="text" class="card-number" placeholder="Card Number">
+           <input type="text" class="card-number" placeholder="Card Number" data-formv-target="cardinput">
         <!-- Date Field -->
               <div class="date-field">
              <div class="month">
-               <select name="Month">
+               <select name="Month" data-formv-target="monthinput">
+                 <option value="Month">Month</option>
                  <option value="january">January</option>
                  <option value="february">February</option>
                  <option value="march">March</option>
@@ -27,7 +28,8 @@
                </select>
              </div>
              <div class="year">
-               <select name="Year">
+               <select name="Year" data-formv-target="yearinput">
+                 <option value="Year">Year</option>
                  <option value="2023">2023</option>
                  <option value="2024">2024</option>
                  <option value="2025">2025</option>
@@ -43,14 +45,15 @@
         <!-- Card Verification Field -->
            <div class="card-verification">
              <div class="cvv-input">
-               <input type="text" placeholder="CVV">
+               <input type="text" placeholder="CVV" data-formv-target="cvvinput">
              </div>
              <div class="cvv-details">
                <p class="sentence">3 or 4 digits usually found <br> on the signature strip</p>
              </div>
            </div>
         <!-- Buttons -->
-           <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
+           <button  class="proceed-btn" data-action="click->formv#validate" data-formv-target="button">Proceed</button>
+
          </div>
        </form>
        <form class="credit-card">
