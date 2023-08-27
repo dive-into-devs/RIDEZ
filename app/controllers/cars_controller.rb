@@ -7,10 +7,20 @@ class CarsController < ApplicationController
    # params[:location]
    # params[:brand]
    # params[:date]
+
   end
 
   def show
-    @car = Car.find(params[:id])
+
+    @car = Car.where(id: params[:id])
+    @markers = @car.geocoded.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude,
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
+    @car = @car.first
   end
 
   def new
@@ -19,6 +29,7 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    @car.location = car_params[:location].capitalize
     if Owner.find_by(user: current_user)
       @owner = Owner.find_by(user: current_user)
     else
