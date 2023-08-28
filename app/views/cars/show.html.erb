@@ -66,14 +66,14 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
       </div>
-    <div class="form-card form-cardstart">
+    <div class="form-card form-cardstart" data-controller="booking">
     <h5>Personal Details</h5>
     <%= form_with action: new_car_offer_path(@car.id) do |form| %>
-    <%= form.text_field :query, placeholder: "First name", data: { bookingform_target: "fname" }%>
-    <%= form.text_field :query, placeholder: "Last name", data: { bookingform_target: "lname" } %>
-    <input name="startdate" type="text" data-controller="datepicker" placeholder="Start date" data-bookingform-target="startdate"/>
-    <input name="enddate" type="text" data-controller="datepicker" placeholder="End date" data-bookingform-target="enddate"/>
-    <button data-bookingform-target="btn" class="btn btn-success text-light w-100" data-action="click->bookingform#validate">Create offer</button>
+    <%= form.text_field :query, placeholder: "First name", data: { booking_target: "fname" }%>
+    <%= form.text_field :query, placeholder: "Last name", data: { booking_target: "lname" } %>
+    <input name="startdate" type="text" data-controller="datepicker" placeholder="Start date" data-booking-target="startdate"/>
+    <input name="enddate" type="text" data-controller="datepicker" placeholder="End date" data-booking-target="enddate"/>
+    <button data-booking-target="btn" class="btn btn-success text-light w-100" data-action="click->booking#validate">Create offer</button>
     <% end %>
     </div>
   </div>
