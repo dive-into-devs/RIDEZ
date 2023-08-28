@@ -12,3 +12,7 @@ Owner.create!(user_id: User.first.id)
   Car.create!(plate: Faker::Vehicle.license_plate, model: Faker::Vehicle.make_and_model, vin: Faker::Vehicle.vin, owner_id: Owner.first.id, description:Faker::Vehicle.car_type, price: 200.95, location: "casablanca")
 end
 Offer.create!(user_id: User.first.id, car_id: Car.first.id, time_period: "24-11-2023")
+Offer.create!(user_id: User.first.id, car_id: Car.find_by(id: 2).id, time_period: "24-11-2023")
+Offer.create!(user_id: User.first.id, car_id: Car.find_by(id: 3).id, time_period: "24-11-2023")
+Offer.create!(user_id: User.first.id, car_id: Car.find_by(id: 4).id, time_period: "24-11-2023")
+Offer.create!(user_id: User.first.id, car_id: Car.find_by(id: 5).id, time_period: "24-11-2023")
