@@ -56,7 +56,7 @@
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
-      </div>
+    </div>
     <div class="form-card" data-controller="bookingform">
     <h5>Personal Details</h5>
     <%= form_with action: new_car_offer_path(@car.id) do |form| %>

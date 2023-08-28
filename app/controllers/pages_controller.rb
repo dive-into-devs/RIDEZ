@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def confirmation
+
   end
 
   def listing
