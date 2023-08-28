@@ -7,12 +7,10 @@
   <% @offers.each do |offer| %>
    <li class="card card-sizing">
       <div class="card-body">
-        <h5 class="card-title"><%= offer.user.full_name%></h5>
-        <p class= "card-text"><%= offer.car.model%>
-        </p>
+        <h5 class="card-title"><%= offer.car.model%></h5>
           <p class= "card-text"><%= offer.car.location%>
         </p>
-        <p class= "card-text"><%= offer.car.price%>
+        <p class= "card-text">$<%= offer.car.price%>
         </p>
          <p class= "card-text"><%= offer.time_period%>
         </p>

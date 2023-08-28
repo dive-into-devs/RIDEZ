@@ -10,13 +10,22 @@
 
   </div>
   <div class="images-section d-flex flex-row justify-content-center align-items-center">
+   <% if @car.photos.exists? %>
     <%= cl_image_tag @car.photos.first.key, crop: :fill %>
     <div class="images-groupe">
       <% @car.photos.take(4).each do |photo| %>
         <%= cl_image_tag photo.key, crop: :fill %>
       <% end %>
         <!-- app/views/articles/index.html.erb -->
-    </div>
+    </div>,
+    <% else %>
+      <img src="https://hips.hearstapps.com/hmg-prod/images/2022-mini-jcw-convertible-102-1635861225.jpg?crop=0.490xw:0.551xh;0.326xw,0.449xh&resize=640:*" alt="car">
+      <div class="images-groupe">
+      <img src="https://www.mini.co.id/en_ID/home/home-stageteaser/seaside-edition/_jcr_content/main/homestageHelper/stageitem/motion.narrow.768w.j_1684126367412.jpg" alt="mini">
+      <img src="https://image5.sahibinden.com/staticContent/vehicleStockImagesV2/1070/45b1bf/x_1216_684_54061001070-03c88dc0cf314485352345f4ee451702.jpg" alt="mini">
+      <img src="https://static.giggster.com/images/location/e4bda9dc-10d2-4626-9eed-d73128e54e9a/637ce34f-98e8-40c2-8ad9-0cbf8023309c/full_hd_retina.jpeg" alt="mini">
+      </div>
+    <% end %>
   </div>
 
 
