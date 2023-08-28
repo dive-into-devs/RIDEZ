@@ -15,7 +15,11 @@ class PagesController < ApplicationController
   end
 
   def listing
-    @owner = Owner.find_by(user: current_user)
+    if Owner.find_by(user: current_user)
+      @owner = Owner.find_by(user: current_user)
+    else
+      @owner = Owner.create(user: current_user)
+    end
     @cars = @owner.cars
   end
 
