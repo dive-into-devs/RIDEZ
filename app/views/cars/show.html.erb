@@ -65,15 +65,15 @@
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
-      </div>
-    <div class="form-card">
+    </div>
+    <div class="form-card" data-controller="bookingform">
     <h5>Personal Details</h5>
     <%= form_with action: new_car_offer_path(@car.id) do |form| %>
-    <%= form.text_field :query, placeholder: "First name" %>
-    <%= form.text_field :query, placeholder: "Last name" %>
-    <input name="date" type="text" data-controller="datepicker" placeholder="Start date"/>
-    <input name="date" type="text" data-controller="datepicker" placeholder="End date"/>
-    <%= form.submit "Create offer", class: "btn btn-success text-light" %>
+    <%= form.text_field :query, placeholder: "First name", data: { bookingform_target: "fname" }%>
+    <%= form.text_field :query, placeholder: "Last name", data: { bookingform_target: "lname" } %>
+    <input name="startdate" type="text" data-controller="datepicker" placeholder="Start date" data-bookingform-target="startdate"/>
+    <input name="enddate" type="text" data-controller="datepicker" placeholder="End date" data-bookingform-target="enddate"/>
+    <button data-bookingform-target="btn" class="btn btn-success text-light w-100" data-action="click->bookingform#validate">Create offer</button>
     <% end %>
     </div>
   </div>
