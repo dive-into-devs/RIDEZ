@@ -7,9 +7,16 @@
           <p>Date:</p>
           <p>January 1st 2023</p>
         </div>
-        <div class="d-flex justify-content-between flex-row w-50">
+        <div class="d-flex justify-content-between flex-row w-50 mb-5">
           <p>Price:</p>
           <p>$300</p>
         </div>
+    </div>
+        <div style='width: 800px; height: 600px;border-radius:10px'
+      data-controller="map" class="map mb-5"
+      id='map'
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+
     </div>
  </div>
