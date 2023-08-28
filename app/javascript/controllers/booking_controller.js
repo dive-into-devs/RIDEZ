@@ -21,7 +21,7 @@ export default class extends Controller {
       this.enddateTarget.classList.add("validation")
     }
     else{
-      window.location.href = "/confirmation"
+      window.location.href = "/payment"
     }
 
   }
