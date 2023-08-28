@@ -13,7 +13,7 @@
    <% if @car.photos.exists? %>
     <%= cl_image_tag @car.photos.first.key, crop: :fill %>
     <div class="images-groupe">
-      <% @car.photos.each do |photo| %>
+      <% @car.photos.take(4).each do |photo| %>
         <%= cl_image_tag photo.key, crop: :fill %>
       <% end %>
         <!-- app/views/articles/index.html.erb -->
@@ -65,8 +65,8 @@
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 
-    </div>
-    <div class="form-card" data-controller="bookingform">
+      </div>
+    <div class="form-card form-cardstart">
     <h5>Personal Details</h5>
     <%= form_with action: new_car_offer_path(@car.id) do |form| %>
     <%= form.text_field :query, placeholder: "First name", data: { bookingform_target: "fname" }%>
